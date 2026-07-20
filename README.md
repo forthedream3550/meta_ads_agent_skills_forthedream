@@ -85,3 +85,12 @@ This is an initial public scaffold. The skills, schemas and policy model are usa
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE).
+
+## Trademarks and Brand Assets
+
+“Meta” and “Facebook” are trademarks of Meta Platforms, Inc.
+This project is independent and is not endorsed by or affiliated with Meta.
+
+The For the Dream name, logo and brand assets are not licensed for reuse
+unless explicitly stated otherwise.
+
