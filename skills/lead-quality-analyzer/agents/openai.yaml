@@ -1,0 +1,3 @@
+interface:
+  display_name: "Lead Quality Analyzer"
+  short_description: "Connect CRM outcomes to Meta campaign decisions."

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Frequency and Fatigue Controller"
+  short_description: "Interpret repetition, recognition and fatigue signals."

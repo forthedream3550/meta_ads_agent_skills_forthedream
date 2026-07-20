@@ -1,0 +1,3 @@
+interface:
+  display_name: "Lead Generation Campaign Auditor"
+  short_description: "Audit Meta lead campaigns before or during delivery."

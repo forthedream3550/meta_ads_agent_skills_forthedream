@@ -1,0 +1,19 @@
+account_id: act_1234567890
+currency: EUR
+timezone: Europe/Brussels
+business_goal: qualified_leads
+primary_conversion: qualified_lead
+sales_capacity:
+  leads_per_business_day: 25
+  target_first_response_minutes: 15
+outcome_stages:
+  - submitted
+  - contactable
+  - relevant
+  - qualified
+  - opportunity
+  - won
+recognition:
+  enabled: true
+  evaluation_window_days: 7
+  target_audience_description: Decision makers in the selected market

@@ -1,0 +1,26 @@
+name: Feature request
+description: Propose a new workflow, skill, provider capability or safety control.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: job
+    attributes:
+      label: User job
+      description: What concrete advertising task should become easier or safer?
+    validations:
+      required: true
+  - type: textarea
+    id: input-output
+    attributes:
+      label: Expected input and output
+      description: Give a sanitized example.
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk and approval
+      description: Can the feature spend money, alter delivery or expose data?
+    validations:
+      required: true

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "idempotencyKey": "example-adset-budget-2026-07-20-001",
+  "accountId": "act_1234567890",
+  "objectType": "adset",
+  "objectId": "987654321",
+  "action": "set_daily_budget",
+  "currentValue": 5000,
+  "proposedValue": 5500,
+  "currency": "EUR",
+  "reason": "Qualified lead cost remained stable while sales capacity is available.",
+  "evidence": [
+    "Seven-day qualified lead cost is within the account target range.",
+    "Frequency and response metrics show no consistent fatigue signal."
+  ],
+  "expectedEffect": "Increase delivery without changing audience or creative variables.",
+  "risk": "Cost per qualified lead may temporarily rise after the budget change.",
+  "rollback": {
+    "action": "set_daily_budget",
+    "value": 5000
+  },
+  "evaluationDue": "After three full delivery days or 20 additional qualified leads, whichever is later.",
+  "approval": {
+    "required": true,
+    "status": "pending"
+  }
+}

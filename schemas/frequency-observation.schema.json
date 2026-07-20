@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/frequency-observation.schema.json",
+  "title": "Frequency observation",
+  "type": "object",
+  "required": [
+    "windowDays",
+    "reach",
+    "impressions",
+    "frequency"
+  ],
+  "properties": {
+    "windowDays": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reach": {
+      "type": "number",
+      "minimum": 0
+    },
+    "impressions": {
+      "type": "number",
+      "minimum": 0
+    },
+    "frequency": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ctr": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "costPerResult": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "conversionRate": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "newReachShare": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "activeCreativeCount": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "comparison": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

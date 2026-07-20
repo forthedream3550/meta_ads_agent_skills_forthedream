@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/lead-campaign-brief.schema.json",
+  "title": "Lead campaign brief",
+  "type": "object",
+  "required": [
+    "name",
+    "businessObjective",
+    "market",
+    "conversionLocation",
+    "offer",
+    "primaryConversion",
+    "budget",
+    "followUp"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "businessObjective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "market": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conversionLocation": {
+      "enum": [
+        "instant_form",
+        "website",
+        "messaging",
+        "calls",
+        "mixed"
+      ]
+    },
+    "offer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primaryConversion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "budget": {
+      "type": "object",
+      "required": [
+        "type",
+        "amount",
+        "currency"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "daily",
+            "lifetime"
+          ]
+        },
+        "amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        }
+      },
+      "additionalProperties": false
+    },
+    "followUp": {
+      "type": "object",
+      "required": [
+        "owner",
+        "targetFirstResponseMinutes"
+      ],
+      "properties": {
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetFirstResponseMinutes": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

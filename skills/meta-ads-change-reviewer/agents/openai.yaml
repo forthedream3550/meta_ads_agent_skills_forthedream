@@ -1,0 +1,3 @@
+interface:
+  display_name: "Meta Ads Change Reviewer"
+  short_description: "Review, approve and log campaign mutations."

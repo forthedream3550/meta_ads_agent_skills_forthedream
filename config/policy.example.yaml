@@ -1,0 +1,31 @@
+version: 1
+mode: supervised
+accounts:
+  allowlist:
+    - act_1234567890
+writes:
+  enabled: false
+  dry_run: true
+  approval_required_for:
+    - set_status
+    - set_daily_budget
+    - set_lifetime_budget
+    - publish_campaign
+  prohibited_actions:
+    - delete_object
+    - modify_billing
+    - modify_business_access
+    - modify_dataset
+    - upload_customer_list
+budgets:
+  max_increase_percent_per_operation: 10
+  max_decrease_percent_per_operation: 20
+  max_cumulative_change_percent_24h: 20
+frequency:
+  universal_hard_cap: null
+  minimum_observation_days: 3
+  require_comparison_signals: true
+logging:
+  append_only: true
+  redact_secrets: true
+  include_before_after: true

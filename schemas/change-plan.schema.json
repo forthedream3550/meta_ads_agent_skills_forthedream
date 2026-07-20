@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/change-plan.schema.json",
+  "title": "Meta Ads change plan",
+  "type": "object",
+  "required": [
+    "version",
+    "idempotencyKey",
+    "accountId",
+    "objectType",
+    "objectId",
+    "action",
+    "proposedValue",
+    "reason",
+    "evidence",
+    "rollback",
+    "approval"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 8
+    },
+    "accountId": {
+      "type": "string",
+      "pattern": "^act_[0-9]+$"
+    },
+    "objectType": {
+      "enum": [
+        "campaign",
+        "adset",
+        "ad"
+      ]
+    },
+    "objectId": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "action": {
+      "enum": [
+        "set_status",
+        "set_daily_budget",
+        "set_lifetime_budget"
+      ]
+    },
+    "currentValue": {},
+    "proposedValue": {},
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 10
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 5
+      }
+    },
+    "expectedEffect": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "risk": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rollback": {
+      "type": "object"
+    },
+    "evaluationDue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "approval": {
+      "type": "object",
+      "required": [
+        "required",
+        "status"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "approved",
+            "rejected"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

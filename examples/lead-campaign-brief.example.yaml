@@ -1,0 +1,32 @@
+name: Consultation lead campaign
+business_objective: Generate qualified consultation requests
+market: Belgium
+languages:
+  - nl
+conversion_location: instant_form
+offer: Free initial consultation
+primary_conversion: qualified_lead
+budget:
+  type: daily
+  amount: 75
+  currency: EUR
+audience:
+  description: Owners and marketing leaders in the selected region
+  exclusions:
+    - existing_customers
+creative:
+  available_formats:
+    - short_video
+    - static_image
+  hypotheses:
+    - Expert-led opening improves lead quality
+    - Concrete operational proof improves form completion
+follow_up:
+  owner: sales-team
+  target_first_response_minutes: 15
+measurement:
+  crm_feedback_available: true
+  outcome_stage: qualified
+constraints:
+  - No unsupported performance guarantees
+  - Keep campaign changes supervised

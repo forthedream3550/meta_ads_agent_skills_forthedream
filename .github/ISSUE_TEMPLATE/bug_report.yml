@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible problem in a skill, schema or MCP tool.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide a sanitized example without credentials or customer data.
+    validations:
+      required: true
+  - type: dropdown
+    id: write-impact
+    attributes:
+      label: Can this affect delivery or spend?
+      options:
+        - No
+        - Possibly
+        - Yes
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Version, provider, transport and relevant configuration with secrets removed.
